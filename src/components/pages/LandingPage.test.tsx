@@ -28,7 +28,6 @@ describe('LandinPage', () => {
   it('renders LandingPage component', () => {
     render(<LandingPage />);
     expect(screen.getByTestId('landing-page')).toMatchSnapshot()
-    // screen.debug();
   });
 
   it('open button exists', () => {
@@ -37,17 +36,15 @@ describe('LandinPage', () => {
     expect(screen.getByText(/Open/)).toBeInTheDocument();
   });
 
-
   it('by clicking Open button Modal component is visible', async () => {
 
     const { user } = setup(<LandingPage />)
-    // screen.debug();
 
     await user.click(screen.getByRole('button', { name: /open/i }))
 
     waitFor(() => expect(screen.getByTestId('close-btn')).toBeInTheDocument()
     )
-    screen.debug();
+    // screen.debug();
   });
 
 

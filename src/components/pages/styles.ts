@@ -10,21 +10,25 @@ export const useStyles = createStyles((theme, _params, getRef) => ({
     },
 
     openButton: {
-        border: 'solid',
+        padding: theme.spacing.sm,
+        border: `solid ${theme.colors.indigo[6]}`,
         fontSize: '1.5rem',
-    },
+        color: theme.colors.indigo[6],
+        width: 'auto',
+        height: 'auto',
 
-    closeButton: {
-        border: 'solid',
-        fontSize: '1.5rem',
+        '&:hover': {
+            backgroundColor: theme.colors.indigo[6],
+            color: 'white',
+        },
     },
 
     modal: {
-        height: '70%',
         display: 'flex',
-        alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
     }
 
 }));
+
+

@@ -6,7 +6,7 @@ exports[`LandinPage > renders LandingPage component 1`] = `
   data-testid="landing-page"
 >
   <button
-    class="mantine-UnstyledButton-root mantine-Button-root mantine-1b7hrf9"
+    class="mantine-UnstyledButton-root mantine-Button-root mantine-1r0y3pt"
     data-button="true"
     data-testid="open-btn"
     type="button"

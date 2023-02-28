@@ -1,6 +1,7 @@
 import { FC, useState } from 'react'
 import { Button, Modal } from '@mantine/core';
 import { useStyles } from './styles'
+import Form from '../organisms/Form/Form';
 
 interface Props { }
 
@@ -17,7 +18,7 @@ const LandingPage: FC<Props> = ({ }) => {
         >
             <Modal
                 classNames={{ modal: classes.modal }}
-                withCloseButton={false}
+                withCloseButton={true}
                 centered
                 opened={opened}
                 onClose={() => setOpened(false)}
@@ -26,15 +27,7 @@ const LandingPage: FC<Props> = ({ }) => {
                 transitionDuration={600}
                 transitionTimingFunction="ease"
             >
-                <Button
-                    data-testid='close-btn'
-                    className={classes.openButton}
-                    onClick={() => setOpened(false)}
-                    variant="default"
-                >
-
-                    Close modal
-                </Button>
+                <Form />
             </Modal>
             <Button
                 data-testid='open-btn'
