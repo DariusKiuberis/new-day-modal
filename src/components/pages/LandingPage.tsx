@@ -11,7 +11,10 @@ const LandingPage: FC<Props> = ({ }) => {
 
     return (
 
-        <div className={classes.container}>
+        <div
+            className={classes.container}
+            data-testid='landing-page'
+        >
             <Modal
                 classNames={{ modal: classes.modal }}
                 withCloseButton={false}
@@ -24,6 +27,7 @@ const LandingPage: FC<Props> = ({ }) => {
                 transitionTimingFunction="ease"
             >
                 <Button
+                    data-testid='close-btn'
                     className={classes.openButton}
                     onClick={() => setOpened(false)}
                     variant="default"
@@ -33,6 +37,7 @@ const LandingPage: FC<Props> = ({ }) => {
                 </Button>
             </Modal>
             <Button
+                data-testid='open-btn'
                 className={classes.openButton}
                 onClick={() => setOpened(true)}
                 variant='default'
